@@ -2,7 +2,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="user-scalable=yes">
     <meta name="referrer" content="no-referrer">
-    <title> Sport TV </title>
+    <title> Sport Only TV </title>
     
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
@@ -342,7 +342,7 @@
             <button onclick="openExternalModal()" class="cat-btn tool-btn" style="border-color: #ff9f43; color: #ff9f43; direction: rtl; background: transparent;">🔗 تشغيل رابط خارجي</button>
             <button onclick="openTop50Modal()" class="cat-btn tool-btn" style="border-color: #ff9f43; color: #ff9f43; direction: rtl; background: transparent;">🌐 أشهر مواقع بث</button>
             <button id="themeToggleBtn" type="button" class="theme-toggle-btn" onclick="toggleTheme()" style="direction: rtl;">🌙 الوضع الداكن</button>
-            <button onclick="window.open('https://omarsalam22142214-ops.github.io/ASKME17')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> تحديات <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://omarsalam22142214-ops.github.io/OFFLINE-22/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> اوفلاين <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://omarsalam22142214-ops.github.io/AUDIOOMAR/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> صوتيات <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://es-d-1604381420260406-019d57a8-1796-76bb-9c92-ec74cb131e7f.codepen.dev/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> يوتيوب بدون اعلانات <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://omarsalam22142214-ops.github.io/FEEDS/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> FEEDAT   <div class="fav-icon-star" title="المفضلة">★</div></button>
+            <button onclick="window.open('https://omarsalam22142214-ops.github.io/ASKME17')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> تحديات <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://omarsalam22142214-ops.github.io/OFFLINE-22/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> اوفلاين <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://omarsalam22142214-ops.github.io/AUDIOOMAR/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> صوتيات <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://omarsalam22142214-ops.github.io/youtubeclear/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> يوتيوب بدون اعلانات <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://omarsalam22142214-ops.github.io/FEEDS/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> FEEDAT   <div class="fav-icon-star" title="المفضلة">★</div></button><button onclick="window.open('https://omarsalam22142214-ops.github.io/PDF-READER/')" class="cat-btn match-btn" style="display: inline-flex; direction: rtl;"> Pdf Reader   <div class="fav-icon-star" title="المفضلة">★</div></button>
             
             <button onclick="exportFavToM3U()" class="cat-btn tool-btn" style="border-color: #3498db; color: #3498db; direction: rtl; background: transparent;">📥 تصدير المفضلة M3U</button>
             
@@ -365,7 +365,7 @@
 
     <button id="toggleNavBtn" onclick="toggleTopNav()" title="إخفاء/إظهار الأدوات" style="position: fixed; top: 15px; left: 15px; z-index: 999999; background: #e84393; color: white; border: 2px solid #fff; border-radius: 50%; width: 45px; height: 45px; cursor: pointer; font-size: 22px; box-shadow: 0 4px 10px rgba(0,0,0,0.8); transition: 0.3s; display: flex; justify-content: center; align-items: center;">⚙️</button>
 
-    <div id="live-clock" style="color: rgb(76, 170, 201); font-size: 18px; font-weight: bold; margin-bottom: 15px; direction: rtl;">⏱ توقيت البث: 11:50:54 AM</div>
+    <div id="live-clock" style="color: rgb(76, 170, 201); font-size: 18px; font-weight: bold; margin-bottom: 15px; direction: rtl;">⏱ توقيت البث: 1:16:07 PM</div>
 
     <div class="search-sort-container">
         <input type="text" id="searchInput" onkeyup="searchChannels()" placeholder="🔍 ابحث عن قناة..." style="direction: rtl;" data-ddg-inputtype="unknown">
@@ -1327,9 +1327,11 @@
             
             if(newName) {
                 currentEditElement.setAttribute('title', newName);
-                let star = currentEditElement.querySelector('.fav-icon-star');
-                currentEditElement.innerText = newName;
-                if(star) currentEditElement.appendChild(star);
+                if(currentEditElement.classList.contains('match-btn')) {
+                    let star = currentEditElement.querySelector('.fav-icon-star');
+                    currentEditElement.innerText = newName;
+                    if(star) currentEditElement.appendChild(star);
+                }
             }
             
             if(newUrl) {
@@ -2752,6 +2754,7 @@ async function playRandomSportsChannel() {
     </footer>
 
 <a href="blob:https://omarsalam22142214-ops.github.io/8e67af63-7a20-4656-a654-39e3ea9ad121" id="sb_down_blob" style="display: none;"></a>
+
 
 
 
